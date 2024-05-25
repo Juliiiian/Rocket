@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project>
+  <Import Project="Sdk.props" Sdk="Microsoft.NET.Sdk" />
+  <PropertyGroup>
+    <Version>2.1.6.0</Version>
+    <AssemblyName>Oxide.Ext.Rocket</AssemblyName>
+    <Authors>Kirollos</Authors>
+    <Description>An Oxide extension for running a WebSocket.</Description>
+    <TargetFrameworks>net46;net48</TargetFrameworks>
+    <LangVersion>7.0</LangVersion>
+    <PackageVersion>2.1.6.0</PackageVersion>
+    <AssemblyVersion>2.1.6</AssemblyVersion>
+    <FileVersion>2.1.6</FileVersion>
+  </PropertyGroup>
+  <Import Project="Sdk.targets" Sdk="Microsoft.NET.Sdk" />
+  <PropertyGroup />
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DocumentationFile>Oxide.Ext.Rocket.xml</DocumentationFile>
+    <NoWarn>1701;1702</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <Optimize>true</Optimize>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Oxide.Core" Version="2.0.*">
+      <ExcludeAssets>contentfiles;analyzers;build</ExcludeAssets>
+    </PackageReference>
+    <PackageReference Include="Oxide.CSharp" Version="2.0.*">
+      <ExcludeAssets>contentfiles;analyzers;build</ExcludeAssets>
+    </PackageReference>
+    <PackageReference Include="Oxide.References" Version="2.0.*">
+      <ExcludeAssets>contentfiles;analyzers;build</ExcludeAssets>
+    </PackageReference>
+    <PackageReference Include="WebSocketSharpFork" Version="1.0.*">
+      <ExcludeAssets>all</ExcludeAssets>
+    </PackageReference>
+  </ItemGroup>
+</Project>
